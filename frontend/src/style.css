@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+.home, .auth {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 450px;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  padding: 12px 18px;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.secondary {
+  background: #111827;
+}
+
+.danger {
+  background: #dc2626;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.error {
+  color: #dc2626;
+}
+
+.dashboard {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.box {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.box p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.form {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+}
+
+.transaction p {
+  margin: 4px 0;
+}
+
+.small {
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.chart-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.full {
+  max-width: 100%;
+}
+
+@media (min-width: 900px) {
+  .charts {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .chart-card:nth-child(3) {
+    grid-column: span 2;
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2563eb;
+}
